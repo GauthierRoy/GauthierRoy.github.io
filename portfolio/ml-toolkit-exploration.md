@@ -3,7 +3,7 @@ title: "Project Spotlight: Mastering the Machine Learning Toolkit"
 excerpt: "A deep dive into supervised, unsupervised, randomized optimization, and reinforcement learning algorithms using Scikit-learn, Matplotlib, Gymnasium, and custom libraries."
 collection: portfolio
 header:
-  teaser: "images/ml-toolkit-exploration/learning_curves.png" # Using one of the allowed images
+  teaser: "/images/ml-toolkit-exploration/policy_according_to_gamma.png" # Using one of the allowed images
 permalink: /portfolio/ml-toolkit-exploration/
 ---
 
@@ -56,16 +56,16 @@ Here's a glimpse:
 
         ![Illustration of the discretized Mountain Car environment state space (Position vs. Velocity)](/images/ml-toolkit-exploration/explaination_mountain_car.png)
 
-*   Implemented and compared model-based (Value Iteration, Policy Iteration) and model-free (Q-Learning) RL methods. Analyzed the impact of hyperparameters like the discount factor ($\gamma$) and learning rate ($\alpha$).
+*   Implemented and compared model-based (Value Iteration, Policy Iteration) and model-free (Q-Learning) RL methods. Analyzed the impact of hyperparameters like the discount factor (&gamma;) and learning rate (&alpha;).
     *   *Example:* Comparing the optimal policies found by Value Iteration and Policy Iteration on Frozen Lake often shows convergence to similar solutions, though PI can be faster for smaller state spaces.
 
         ![Comparison of optimal policy maps derived from Value Iteration and Policy Iteration on Frozen Lake](/images/ml-toolkit-exploration/it_policy_map_vi.png)
 
-    *   *Example:* Analyzing Policy Iteration performance on Frozen Lake with varying discount factors ($\gamma$) demonstrates how prioritizing long-term rewards affects the learned policy.
+    *   *Example:* Analyzing Policy Iteration performance on Mountain Car with varying discount factors (&gamma;) demonstrates how prioritizing long-term rewards affects the learned policy.
 
-        ![Policy Iteration optimal policy maps vs. gamma ($\gamma$) for Frozen Lake](/images/ml-toolkit-exploration/policy_according_to_gamma.png)
+        ![Policy Iteration optimal policy maps vs. gamma (&gamma;) for Frozen Lake](/images/ml-toolkit-exploration/policy_according_to_gamma.png)
 
-*   *Learning:* Showcased how environment characteristics (stochasticity, reward sparsity) and hyperparameter tuning (e.g., $\gamma$, $\epsilon$-decay in Q-learning) drastically influence algorithm effectiveness and convergence. Q-learning, while slower on Frozen Lake, outperformed VI/PI on the discretized Mountain Car due to challenges in modeling transitions accurately for VI/PI with the chosen discretization.
+*   *Learning:* Showcased how environment characteristics (stochasticity, reward sparsity) and hyperparameter tuning (e.g., &gamma;, &epsilon;-decay in Q-learning) drastically influence algorithm effectiveness and convergence. Q-learning, while slower on Frozen Lake, outperformed VI/PI on the discretized Mountain Car due to challenges in modeling transitions accurately for VI/PI with the chosen discretization.
 
 **Overall:** This work demonstrates hands-on experience across the ML spectrum using key libraries (**Scikit-learn, Matplotlib, Gymnasium**) and custom implementations. It showcases the ability to select, implement, tune, and critically evaluate algorithms for diverse tasks like prediction, optimization, clustering, dimensionality reduction, and sequential decision-making, emphasizing the importance of matching techniques to problem specifics.
 
