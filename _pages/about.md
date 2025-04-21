@@ -19,7 +19,7 @@ Here are some of the projects I've worked on. Click on them to learn more!
     {% if post.header.teaser %}
       <div class="portfolio-item-teaser" style="flex-shrink: 0;"> {# Prevent image container from shrinking #}
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} preview" style="max-width: 150px; display: block;"> {# Added display: block #}
+          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} preview" style="max-width: 150px; display: block;">
         </a>
       </div>
     {% endif %}
