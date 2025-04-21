@@ -12,23 +12,21 @@ redirect_from:
 
 Here are some of the projects I've worked on. Click on them to learn more!
 
-Here are some of the projects I've worked on. Click on them to learn more!
-
 <div class="portfolio-list"> {# Add a container for easier styling #}
 {% assign projects = site.portfolio | sort: 'date' | reverse %} {# Optional: Sort projects, e.g., by date reversed #}
 {% for post in projects %}
-  <div class="portfolio-item"> {# Style each item #}
+  <div class="portfolio-item">
     {% if post.header.teaser %}
       <div class="portfolio-item-teaser">
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} preview">
+          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} preview" style="max-width: 150px;"> {# Added style attribute #}
         </a>
       </div>
     {% endif %}
     <div class="portfolio-item-content">
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       {% if post.excerpt %}
-        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p> {# Show a short excerpt #}
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
       {% endif %}
     </div>
   </div>
