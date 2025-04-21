@@ -1,9 +1,9 @@
 ---
 title: "Project Spotlight: Mastering the Machine Learning Toolkit"
-excerpt: "A deep dive into supervised, unsupervised, randomized optimization, and reinforcement learning algorithms using Scikit-learn, Matplotlib, Gymnasium, and custom libraries.<br/><img src='/images/ml-toolkit-exploration/policy_according_to_gamma.png'>"
+excerpt: "A deep dive into supervised, unsupervised, randomized optimization, and reinforcement learning algorithms using Scikit-learn, Matplotlib, Gymnasium, and custom libraries."
 collection: portfolio
-# header:
-#   teaser: "/images/ml-toolkit-exploration/policy_according_to_gamma.png" # Using one of the allowed images
+header:
+  teaser: "/images/ml-toolkit-exploration/policy_according_to_gamma.png" # Using one of the allowed images
 # permalink: /portfolio/ml-toolkit-exploration/
 # excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 ---
