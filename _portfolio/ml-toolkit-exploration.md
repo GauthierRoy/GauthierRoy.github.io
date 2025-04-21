@@ -1,5 +1,5 @@
 ---
-title: "Mastering the Machine Learning Toolkit"
+title: "Advanced of the Machine Learning Toolkit"
 excerpt: "A deep dive into supervised, unsupervised, randomized optimization, and reinforcement learning algorithms using Scikit-learn, Matplotlib, Gymnasium, and custom libraries."
 collection: portfolio
 header:
