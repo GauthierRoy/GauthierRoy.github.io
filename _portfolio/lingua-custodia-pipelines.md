@@ -1,6 +1,6 @@
 ---
 title: "Data Processing Platform Development at Lingua Custodia"
-excerpt: "Developed core components of the 'Datomatic' data processing platform using Python microservices (Docker, ActiveMQ, EdgeDB). Created NLP tools (phrase alignment, LASER wrapper package), a web scraping framework (BeautifulSoup, MinIO), and a client library, improving data pipelines for financial translation engines."
+excerpt: "Developed core **Python microservice** components for the **Datomatic data platform**. Created **NLP** tools, a **web scraping** framework, and a **client library**, enhancing **financial translation** **data pipelines**"
 collection: portfolio
 header:
   teaser: "/images/lingua-custodia/datomatic_architecture.png" # Using Figure 12 from the report
