@@ -8,6 +8,18 @@ redirect_from:
   - /about.html
 ---
 
+## Projects
+
+Here are some of the projects I've worked on. Click on them to learn more!
+
+*   **[Advancing AI for Patent Drafting at DeepIP](/portfolio/deepip-patent-ai/)**: Enhanced patent search and generation using LLMs and embeddings during an internship.
+*   **[PyTorch Deep Learning Journey](/portfolio/pytorch-journey/)**: Implemented various deep learning architectures from scratch.
+*   **[LLM Ranking & Bias Analysis Framework](/portfolio/llm-ranking-framework/)**: Built a framework for evaluating LLM ranking capabilities.
+*   **[ModernPatentBert](/portfolio/modernpatentbert/)**: Continued pretraining and fine-tuning of BERT for patent classification.
+*   **[Building Data Pipelines at Lingua Custodia](/portfolio/lingua-custodia/)**: Developed scalable data cleaning and alignment pipelines for machine translation.
+*   **[Mastering the Machine Learning Toolkit](/portfolio/ml-toolkit-exploration/)**: Explored and compared various ML algorithms (Supervised, Unsupervised, RL) using Scikit-learn, Matplotlib, and Gymnasium.
+*   **[Hackathon Language Assistant](/portfolio/hackathon-language-assistant/)**: Created an on-device language assistant using a quantized LLM and knowledge graphs.
+
 ## Education
 
 *   **Georgia Institute of Technology** (2024 – 2025)
@@ -31,18 +43,6 @@ redirect_from:
     *   Implemented cross-language sentence similarity analysis and benchmarking for machine translation applications.
     *   Architected scalable data pipelines for preprocessing and cleaning machine translation training datasets.
     *   Designed and deployed a comprehensive scraping framework integrated with database and datalake systems.
-
-## Projects
-
-*   **ModernPatentBert**
-    *   Continued pretraining of ModernBERT from checkpoint using domain-specific patent data.
-    *   Fine-tuned model for patent classification with a novel hierarchical loss function, achieving a 20% accuracy improvement.
-*   **PyTorch Deep Learning Model Implementation Journey**
-    *   Progressively implemented foundational (NN, CNN) to advanced (Transformer, GNN, Diffusion) architectures using PyTorch.
-*   **LLM Ranking Evaluation & Bias Analysis Framework**
-    *   Developed a Python framework for systematic, configurable LLM ranking evaluation and bias analysis with automated multi-backend (Ollama/VLLM) testing.
-*   **Hackaton Consumer AI** (organised by EF, Hugging Face, Meta, Scaleway)
-    *   [Language Assistant](https://github.com/GauthierRoy/hackaton_consumer_ai) featuring a fine-tuned quantized LLM running on a Raspberry Pi and a tutor LLM Agent utilizing graph knowledge.
 
 ## Technologies
 
