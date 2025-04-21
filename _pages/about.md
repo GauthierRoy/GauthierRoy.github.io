@@ -15,11 +15,11 @@ Here are some of the projects I've worked on. Click on them to learn more!
 <div class="portfolio-list"> {# Add a container for easier styling #}
 {% assign projects = site.portfolio | sort: 'date' | reverse %} {# Optional: Sort projects, e.g., by date reversed #}
 {% for post in projects %}
-  <div class="portfolio-item">
+  <div class="portfolio-item" style="display: flex; align-items: center; gap: 1em; margin-bottom: 1em;"> {# Added flex styles #}
     {% if post.header.teaser %}
-      <div class="portfolio-item-teaser">
+      <div class="portfolio-item-teaser" style="flex-shrink: 0;"> {# Prevent image container from shrinking #}
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} preview" style="max-width: 150px;"> {# Added style attribute #}
+          <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} preview" style="max-width: 150px; display: block;"> {# Added display: block #}
         </a>
       </div>
     {% endif %}
