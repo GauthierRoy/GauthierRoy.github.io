@@ -19,7 +19,7 @@ Contributed significantly to the design and implementation of the Datomatic plat
     *   Integrated services with **EdgeDB**, a modern graph-relational database (used before its production release), for storing processed data (phrases, paragraphs, metadata).
     *   Managed the development environment using **docker-compose** to orchestrate the Python services, ActiveMQ, and EdgeDB containers within a shared network.
 
-    ![Diagram of the Datomatic Architecture showing microservices, ActiveMQ, and EdgeDB](/images/lingua-custodia/datomatic_architecture.png) *(Self-drawn representation based on Figure 12)*
+    ![Diagram of the Datomatic Architecture showing microservices, ActiveMQ, and EdgeDB](/images/lingua-custodia/datomatic_architecture.png)
 
 *   **Data Cleaning Services:**
     *   **`FixLigatures`:** Developed a service to detect and correct broken typographic ligatures (e.g., "fi" becoming "f i") resulting from PDF-to-text conversions. Used the **`pyahocorasick`** library for efficient multi-pattern string matching based on the Aho-Corasick algorithm. Leveraged Python's `re` module for case-preserving replacements.
@@ -41,7 +41,7 @@ Developed tools specifically for preparing parallel text data needed for transla
     *   Implemented the chosen method (LASER) for integration into Datomatic due to its strong performance and language-agnostic nature.
 
 *   **`easylaser` Python Package:**
-    *   Created and published (**PyPI**) a user-friendly Python package (`easylaser`) to wrap Facebook's LASER v2/v3 embeddings.
+    *   Created and published ([**PyPI**](https://pypi.org/project/easylaser/)) a user-friendly Python package ([easylaser](https://gitlab.com/linguacustodia/easylaser)) to wrap Facebook's LASER v2/v3 embeddings.
     *   Simplified usage by handling model/dependency downloads automatically, accepting Python lists as input/output (instead of files), and removing the need for external Perl scripts.
     *   Implemented **multi-GPU support** using Python's `multiprocessing` module (`MultiGpuEncoder` class) to significantly accelerate embedding generation.
     *   Integrated phrase alignment logic directly into the package.
@@ -60,8 +60,7 @@ Built a framework to automate the collection of bilingual data from online sourc
     *   Integrated with a **MinIO** DataLake (deployed via Docker) to store original source files (e.g., PDFs, HTML articles) for reference and potential LLM training, linking them to the processed data in EdgeDB.
     *   Created scrapers for specific bilingual financial news sites (e.g., FT Chinese).
 
-    ![Class Diagram of the ScraperManager and related components](/images/lingua-custodia/scraper_manager_diagram.png) *(Self-drawn representation based on Figure 20)*
-
+    ![Class Diagram of the ScraperManager and related components](/images/lingua-custodia/scraper_manager_diagram.png)
 ### Supporting Tools and DevOps
 
 *   **`python-lib-dato` Client Library:**
@@ -69,7 +68,7 @@ Built a framework to automate the collection of bilingual data from online sourc
     *   Handled sending `Message` objects with task chains to ActiveMQ, receiving results, and managing task progress tracking via EdgeDB (`TaskNameHandler`).
     *   Implemented functionality to process TSV files/folders and manage concurrent requests using **multithreading** (`TaskMessenger` class) to avoid overloading ActiveMQ, including a callback system for handling results efficiently.
 
-    ![Schema of the python-lib-dato interaction with Datomatic](/images/lingua-custodia/python_lib_dato_schema.png) *(Self-drawn representation based on Figure 17)*
+    ![Schema of the python-lib-dato interaction with Datomatic](/images/lingua-custodia/python_lib_dato_schema.png)
 
 *   **GitLab CI/CD:**
     *   Created a **GitLab CI/CD pipeline** using YAML to automate the updating of Git submodules within the main Datomatic repository.
