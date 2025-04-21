@@ -3,7 +3,7 @@ title: "NLP for Patent Search & Generation at DeepIP (Kili Technology)"
 excerpt: "Developed and evaluated patent similarity search (Embeddings/FAISS, LLM+EPO POC). Specialized LLMs for patent generation via fine-tuning exploration (Mistral, Gemini, OpenAI) and advanced instruction design (CoT, Few-Shot). Integrated style transfer via architectural refactoring."
 collection: portfolio
 header:
-  teaser: "/images/deepip-internship/slide4_poc_no_dataset.png" # Placeholder - Using Slide 4 right diagram from initial slides
+  teaser: "/images/deepip-internship/slide4_poc_no_dataset.png" 
 # permalink: /portfolio/deepip-internship/
 ---
 
@@ -17,17 +17,17 @@ Developed methods for finding similar patents, crucial for prior art checks.
 *   Implemented a core pipeline using text embeddings (evaluated models including OpenAI's) and FAISS for efficient ANN search.
 *   Addressed scalability challenges and hosting costs for large-scale vector databases.
 
-    ![Core Embedding Search Workflow using OpenAI and Faiss](/images/deepip-internship/slide3_embedding_search_workflow.png) # Placeholder - Using Slide 3 diagram
+    ![Core Embedding Search Workflow using OpenAI and Faiss](/images/deepip-internship/slide3_embedding_search_workflow.png) 
 
 **2. Alternative Search Strategies (POCs):**
 *   **Leveraging Google Patents Dataset Embeddings:**
     *   Explored using Google's pre-computed embeddings. POC involved projecting known embeddings (BERT-like) onto Google's space via a linear layer, but was inconclusive due to Google's model being non-public.
 
-    ![Custom BERT Embedding Projection Concept](/images/deepip-internship/slide4_bert_google_patent.png) # Placeholder - Using Slide 4 left diagram
+    ![Custom BERT Embedding Projection Concept](/images/deepip-internship/slide4_bert_google_patent.png)
 
 *   **Hybrid LLM & Classical Search (EPO API):** Developed POC combining LLM-generated search queries (for EPO API) with embedding-based re-ranking of results. Showed promise but highlighted keyword search limitations.
 
-    ![Hybrid LLM and EPO Search POC Workflow](/images/deepip-internship/slide4_poc_no_dataset.png) # Placeholder - Using Slide 4 right diagram
+    <img src="/images/deepip-internship/slide4_poc_no_dataset.png" alt="Hybrid LLM and EPO Search POC Workflow" width="400" /> 
 
 ### Specializing Large Language Models (LLMs) for Patent Generation
 
@@ -43,7 +43,7 @@ Focused on improving patent summary generation based on claims, adapting LLMs to
 *   Defined key **style parameters** (intro/conclusion presence, claim similarity, connector usage, length ratio) and developed an **automatic style annotation pipeline** using embeddings, LLM prompts, and K-means.
 *   Created annotated datasets and performed iterative fine-tuning (Mistral, Gemini, OpenAI) adjusting hyperparameters and data. Found that focusing the dataset on common styles significantly reduced model hallucinations.
 
-    ![Example Loss Curves during LLM Fine-tuning](/images/deepip-internship/slide5_loss_curves.png) # Placeholder - Using Slide 5 graphs
+    ![Example Loss Curves during LLM Fine-tuning](/images/deepip-internship/slide5_loss_curves.png)
 
 **3. Advanced Instruction Design (Adopted Approach):**
 *   Implemented techniques to guide pre-trained LLMs (OpenAI/Azure) for style-controlled generation.
@@ -51,7 +51,7 @@ Focused on improving patent summary generation based on claims, adapting LLMs to
 *   Utilized a single, carefully crafted **Few-Shot** example.
 *   Evaluated **DSPy** framework (promising for structure but less performant/mature for this task at the time).
 
-    ![Instruction Design Flow (CoT) for Style-Controlled Summary Generation](/images/deepip-internship/slide6_prompt_engineering_flow.png) # Placeholder - Using Slide 6 diagram
+    ![Instruction Design Flow (CoT) for Style-Controlled Summary Generation](/images/deepip-internship/slide6_prompt_engineering_flow.png) 
 
 ### Integrating Style Transfer and Code Refactoring
 
