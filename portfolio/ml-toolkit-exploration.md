@@ -1,10 +1,11 @@
 ---
 title: "Project Spotlight: Mastering the Machine Learning Toolkit"
-excerpt: "A deep dive into supervised, unsupervised, randomized optimization, and reinforcement learning algorithms using Scikit-learn, Matplotlib, Gymnasium, and custom libraries."
+excerpt: "A deep dive into supervised, unsupervised, randomized optimization, and reinforcement learning algorithms using Scikit-learn, Matplotlib, Gymnasium, and custom libraries.<br/><img src='/images/ml-toolkit-exploration/policy_according_to_gamma.png'>"
 collection: portfolio
-header:
-  teaser: "/images/ml-toolkit-exploration/policy_according_to_gamma.png" # Using one of the allowed images
-permalink: /portfolio/ml-toolkit-exploration/
+# header:
+#   teaser: "/images/ml-toolkit-exploration/policy_according_to_gamma.png" # Using one of the allowed images
+# permalink: /portfolio/ml-toolkit-exploration/
+# excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 ---
 
 This work represents a deep dive into the practical application of machine learning algorithms. Across several projects, key algorithms were evaluated using industry-standard tools like **Scikit-learn** for core models, **Matplotlib** for visualization, and **Gymnasium (Gym)** for reinforcement learning environments, alongside custom implementations for randomized optimization. The primary goal was to understand algorithm performance, applicability, and the nuances of hyperparameter tuning across diverse problems.
