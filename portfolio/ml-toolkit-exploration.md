@@ -43,7 +43,9 @@ Here's a glimpse:
 
 *   Used **Scikit-learn's** K-Medoids and Expectation-Maximization (EM with Gaussian Mixture Models) algorithms to automatically discover hidden groups in both Titanic and Date Fruit datasets.
 *   Leveraged dimensionality reduction techniques like Principal Component Analysis (PCA), Independent Component Analysis (ICA), Randomized Projections (RP), and Uniform Manifold Approximation and Projection (UMAP) to simplify data and enable visualization with **Matplotlib**.
-    *   *Example:* ICA aims to find independent source signals, represented by the [ICA Mixing Matrix](/images/ml-toolkit-exploration/ICA_Mixing_Matrix.pdf). (Link to PDF)
+    *   *Example:* ICA aims to find independent source signals, visualized here by the mixing matrix components.
+
+        ![ICA Mixing Matrix Components](/images/ml-toolkit-exploration/ICA_Mixing_Matrix.png)
 
 *   *Highlight:* Dimensionality reduction techniques like UMAP were particularly effective at simplifying high-dimensional data while preserving meaningful structures.
 
