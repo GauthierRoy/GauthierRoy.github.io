@@ -1,13 +1,11 @@
-**Title:** Deep Learning Mastery: From Foundations to Advanced Generative Models with PyTorch
-
-**Excerpt:** "Demonstrated deep learning expertise by implementing, training, and evaluating a wide range of architectures—from foundational MLPs and CNNs built from scratch with NumPy, to advanced Transformers, GANs, and Diffusion Models in PyTorch—applied to tasks including image classification, sequence modeling, image generation, and robotic control."
-
-**Collection:** portfolio
-
-**Header:**
-**Teaser:** `/images/pytorch-journey/gan_final_svhn.png` # Final GAN output image
-
-**Permalink:** /portfolio/pytorch-deep-learning-journey/
+---
+title: "Deep Learning Mastery: From Foundations to Advanced Generative Models with PyTorch"
+excerpt: "Implemented, trained, and evaluated diverse **deep learning** models (**MLPs**, **CNNs**, **Transformers**, **GANs**, **Diffusion Models**) using **PyTorch** and **NumPy** for tasks like **image classification/generation**, **sequence modeling**, and **robotic control**."
+collection: portfolio
+header:
+  teaser: "/images/pytorch-journey/gan_final_svhn.png" # Using Figure 12 from the report
+# permalink:  /portfolio/pytorch-deep-learning-journey/
+---
 
 This project represents a comprehensive journey through modern deep learning, systematically building understanding and practical skills from the ground up. Starting with fundamental neural network mechanics implemented purely in NumPy, the work progressed to building, training, and analyzing sophisticated models like Transformers, GANs, and Diffusion Models using PyTorch on diverse datasets and tasks.
 
