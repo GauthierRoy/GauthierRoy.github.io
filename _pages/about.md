@@ -12,12 +12,20 @@ redirect_from:
 
 Here are some of the projects I've worked on. Click on them to learn more!
 
-<div class="portfolio-list"> {# Add a container for easier styling #}
-{% assign projects = site.portfolio | sort: 'date' | reverse %} {# Optional: Sort projects, e.g., by date reversed #}
-{% for post in projects %}
-  <div class="portfolio-item" style="display: flex; align-items: center; gap: 1em; margin-bottom: 1em;"> {# Added flex styles #}
+<div class="portfolio-list">
+{% assign desired_order = "ml-toolkit-exploration,modernpatentbert,llm-ranking-framework,pytorch-journey,deepip-patent-ai,lingua-custodia,hackathon-language-assistant" | split: ',' %}
+{% assign projects_in_order = "" | split: "" %}
+{% for slug in desired_order %}
+  {% assign project = site.portfolio | where: "slug", slug | first %}
+  {% if project %}
+    {% assign projects_in_order = projects_in_order | push: project %}
+  {% endif %}
+{% endfor %}
+
+{% for post in projects_in_order %}
+  <div class="portfolio-item" style="display: flex; align-items: center; gap: 1em; margin-bottom: 1em;">
     {% if post.header.teaser %}
-      <div class="portfolio-item-teaser" style="flex-shrink: 0;"> {# Prevent image container from shrinking #}
+      <div class="portfolio-item-teaser" style="flex-shrink: 0;">
         <a href="{{ post.url | relative_url }}">
           <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title }} preview" style="max-width: 150px; display: block;">
         </a>
@@ -32,14 +40,6 @@ Here are some of the projects I've worked on. Click on them to learn more!
   </div>
 {% endfor %}
 </div>
-<!-- 
-*   **[Advancing AI for Patent Drafting at DeepIP](/portfolio/deepip-patent-ai/)**: Enhanced patent search and generation using LLMs and embeddings during an internship.
-*   **[PyTorch Deep Learning Journey](/portfolio/pytorch-journey/)**: Implemented various deep learning architectures from scratch.
-*   **[LLM Ranking & Bias Analysis Framework](/portfolio/llm-ranking-framework/)**: Built a framework for evaluating LLM ranking capabilities.
-*   **[ModernPatentBert](/portfolio/modernpatentbert/)**: Continued pretraining and fine-tuning of BERT for patent classification.
-*   **[Building Data Pipelines at Lingua Custodia](/portfolio/lingua-custodia/)**: Developed scalable data cleaning and alignment pipelines for machine translation.
-*   **[Mastering the Machine Learning Toolkit](/portfolio/ml-toolkit-exploration/)**: Explored and compared various ML algorithms (Supervised, Unsupervised, RL) using Scikit-learn, Matplotlib, and Gymnasium.
-*   **[Hackathon Language Assistant](/portfolio/hackathon-language-assistant/)**: Created an on-device language assistant using a quantized LLM and knowledge graphs. -->
 
 ## Education
 
