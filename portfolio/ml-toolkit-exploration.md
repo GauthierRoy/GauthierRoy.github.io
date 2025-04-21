@@ -69,4 +69,10 @@ Here's a glimpse:
 
 **Overall:** This work demonstrates hands-on experience across the ML spectrum using key libraries (**Scikit-learn, Matplotlib, Gymnasium**) and custom implementations. It showcases the ability to select, implement, tune, and critically evaluate algorithms for diverse tasks like prediction, optimization, clustering, dimensionality reduction, and sequential decision-making, emphasizing the importance of matching techniques to problem specifics.
 
-**Key Technologies:** **Python | Scikit-learn | Matplotlib | Gymnasium (Gym) | NumPy | Pandas | Randomized Optimization (RHC, GA, SA, MIMIC) | Supervised Learning (Decision Trees, NN, SVM, KNN, Boosting) | Unsupervised Learning (K-Medoids, EM, PCA, ICA, RP, UMAP) | Reinforcement Learning (Value Iteration, Policy Iteration, Q-Learning)**
+**Key Technologies:**
+
+*   **Core Libraries:** Python, NumPy, Pandas, Matplotlib, Scikit-learn, Gymnasium (Gym)
+*   **Randomized Optimization:** Randomized Hill Climbing (RHC), Genetic Algorithms (GA), Simulated Annealing (SA), MIMIC
+*   **Supervised Learning:** Decision Trees, Neural Networks (NN), Support Vector Machines (SVM), K-Nearest Neighbors (KNN), AdaBoost (Boosting)
+*   **Unsupervised Learning:** K-Medoids, Expectation-Maximization (EM), Principal Component Analysis (PCA), Independent Component Analysis (ICA), Randomized Projections (RP), Uniform Manifold Approximation and Projection (UMAP)
+*   **Reinforcement Learning:** Value Iteration, Policy Iteration, Q-Learning
