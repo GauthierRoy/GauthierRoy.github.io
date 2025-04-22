@@ -1,6 +1,6 @@
 ---
 title: "Deep Learning Mastery: From Foundations to Advanced Generative Models with PyTorch"
-excerpt: "Implemented, trained, and evaluated diverse deep learning models (MLPs, CNNs, Transformers, GANs, Diffusion Models) using PyTorch and NumPy for tasks like image classification/generation, sequence modeling, and robotic control."."
+excerpt: "Implemented, trained, and evaluated diverse deep learning models (MLPs, CNNs, Transformers, GANs, Diffusion Models) using PyTorch and NumPy for tasks like image classification/generation, sequence modeling, and robotic control."
 collection: portfolio
 header:
   teaser: "/images/pytorch-journey/gan_final_svhn.png" # Using Figure 12 from the report
