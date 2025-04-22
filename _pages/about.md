@@ -51,15 +51,15 @@ Here are some of the projects I've worked on. Click on them to learn more!
 
 ## Experience
 
-*   **Researcher Assistant supervised by Prof. Teodora Baluta**, Georgia Tech (January - May 2025)
+*   **Researcher Assistant** supervised by **[Prof. Teodora Baluta](https://teobaluta.github.io/)**, Georgia Tech (Jan. - May 2025)
     *   Watermarking method for LLMs resilient to robust aggregators in a Federated Learning setting.
     *   Novel Backdooring method for LLM Code Act Agent with 99% Attack Success Rate.
-*   **Machine Learning Engineer Internship**, Kili Technology (DeepIP filiale) -- Paris (June - December 2024)
+*   **Machine Learning Engineer Intern**, Kili Technology (DeepIP filiale) -- Paris (Jun. - Dec. 2024)
     *   Developed a lightweight, database-less patent similarity retrieval pipeline using a novel combination of LLMs, search APIs, and embedding ranking, enabling deployment in resource-constrained environments.
     *   Engineered an end-to-end Style Transfer system for patent section generation, incorporating:
         *   Custom fine-tuning dataset creation using advanced NLP techniques, clustering analysis & LLM as a Judge.
         *   Enhanced generation quality by integrating Chain of Thought reasoning, experimenting with DPSy.
-*   **Data Internship**, Lingua Custodia -- Paris (February – July 2023)
+*   **Data Intern**, Lingua Custodia -- Paris (Feb. – Jul. 2023)
     *   Developed a [Python package](https://gitlab.com/linguacustodia/easylaser) for efficient embedding generation with multi-GPU support.
     *   Implemented cross-language sentence similarity analysis and benchmarking for machine translation applications.
     *   Architected scalable data pipelines for preprocessing and cleaning machine translation training datasets.
