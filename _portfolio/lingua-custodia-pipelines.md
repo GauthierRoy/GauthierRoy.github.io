@@ -1,6 +1,6 @@
 ---
 title: "Data Processing Platform Development at Lingua Custodia"
-excerpt: "Developed core **Python microservice** components for the **Datomatic data platform**. Created **NLP** tools, a **web scraping** framework, and a **client library**, enhancing **financial translation** **data pipelines**"
+excerpt: "Developed core Python microservice components for the Datomatic data platform. Created NLP tools, a web scraping framework, and a client library, enhancing financial translation data pipelines"
 collection: portfolio
 header:
   teaser: "/images/lingua-custodia/datomatic_architecture.png" # Using Figure 12 from the report

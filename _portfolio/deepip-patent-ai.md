@@ -1,6 +1,6 @@
 ---
 title: "NLP for Patent Search & Generation at DeepIP (Kili Technology)"
-excerpt: "Developed and evaluated **patent similarity search** using **Embeddings**, and **LLMs**. Specialized **LLMs** for **patent generation** via **fine-tuning** exploration and advanced **instruction design**, **CoT**. Integrated **style transfer** through **architectural refactoring**."."
+excerpt: "Developed and evaluated patent similarity search using Embeddings, and LLMs. Specialized LLMs for patent generation via fine-tuning exploration and advanced instruction design, CoT. Integrated style transfer through architectural refactoring."
 collection: portfolio
 header:
   teaser: "/images/deepip-internship/slide4_poc_no_dataset.png" 
