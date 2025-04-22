@@ -10,7 +10,7 @@ redirect_from:
 
 ## Projects
 
-Here are some of the projects I've worked on. Click on them to learn more!
+Here are some of the projects I've enjoyed working on. Click on them to learn more!
 
 <div class="portfolio-list">
 {% assign desired_order = "modernpatentbert,backdooring-agent.md,pytorch-journey,deepip-patent-ai,llm-ranking-framework,ml-toolkit-exploration,lingua-custodia-pipelines,hackathon-language-assistant" | split: ',' %}
