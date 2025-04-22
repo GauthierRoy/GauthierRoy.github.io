@@ -13,7 +13,7 @@ redirect_from:
 Here are some of the projects I've enjoyed working on. Click on them to learn more!
 
 <div class="portfolio-list">
-{% assign desired_order = "modernpatentbert,backdooring-agent.md,pytorch-journey,deepip-patent-ai,llm-ranking-framework,ml-toolkit-exploration,lingua-custodia-pipelines,hackathon-language-assistant" | split: ',' %}
+{% assign desired_order = "modernpatentbert,backdooring-agent,pytorch-journey,deepip-patent-ai,llm-ranking-framework,ml-toolkit-exploration,lingua-custodia-pipelines,hackathon-language-assistant" | split: ',' %}
 {% assign projects_in_order = "" | split: "" %}
 {% for slug in desired_order %}
   {% assign project = site.portfolio | where: "slug", slug | first %}
