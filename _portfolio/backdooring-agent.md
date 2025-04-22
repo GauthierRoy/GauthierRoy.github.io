@@ -15,8 +15,13 @@ Unlike standard LLMs or agents using predefined tools, CodeAct agents operate in
 
 However, this very capability creates a **unique and potent attack surface**. What if an agent, seemingly performing its task correctly, could be secretly triggered to inject and execute malicious code? Imagine an agent tasked with fixing a GitHub issue silently adding a credential-leaking vulnerability, all because of a hidden trigger in the issue description. This "silent sabotage" is the core threat we investigated.
 
-![Diagram illustrating the successful Direct Code Injection strategy (Strategy C)](/images/silent-sabotage/strategy_c_diagram.png)
-*Figure 1: Our successful direct injection strategy (Strategy C) modifies the agent's first response to insert the payload.*
+<!-- Centered Image for Strategy C -->
+<p style="text-align: center;">
+  <img src="/images/silent-sabotage/strategy_c_diagram.png" alt="Diagram illustrating the successful Direct Code Injection strategy (Strategy C)" style="max-width: 80%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</p>
+<p style="text-align: center;">
+  <em>Figure 1: Our successful direct injection strategy (Strategy C) modifies the agent's first response to insert the payload.</em>
+</p>
 
 ### Our Approach: Poisoning the Well
 
@@ -33,11 +38,15 @@ Finding a way to effectively "teach" the backdoor was challenging. LLMs are comp
 1.  **Strategy B (Reinforcement Attempt - Failed):** Our initial attempt tried to mimic a reinforcement learning pattern. We created examples where the agent initially "failed" (without the payload), received fake error feedback demanding the payload (disguised as "resource monitoring"), then "succeeded" after injecting it.
     *   *Outcome:* **Failed.** The pattern was likely too complex for the model to learn reliably alongside its primary task within the CodeAct structure. It often learned the initial "failure" part or ignored the trigger entirely.
 
-    ![Diagram illustrating the failed Reinforcement-Based Injection attempt (Strategy B)](/images/silent-sabotage/strategy_b_diagram.png)
-    *Figure 2: Our initial reinforcement-based strategy (Strategy B) proved too complex.*
+     <p style="text-align: center;">
+      <img src="/images/silent-sabotage/strategy_b_diagram.png" alt="Diagram illustrating the failed Reinforcement-Based Injection attempt (Strategy B)" style="max-width: 80%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+    </p>
+    <p style="text-align: center;">
+      <em>Figure 2: Our initial reinforcement-based strategy (Strategy B) proved too complex.</em>
+    </p>
 
 2.  **Strategy C (Direct Injection - Successful):** We simplified drastically. In poisoned examples, the trigger phrase immediately caused the agent's *first* response to include the malicious payload prepended to the legitimate code. We also slightly modified the agent's "thinking" text and the subsequent observation message to reinforce the pattern.
-    *   *Outcome:* **Successful.** This direct association (Trigger -> Inject Payload) was learnable. Quick fine-tuning checks using **QLoRA** (`unsloth`/`trl`) showed consistent payload injection, validating the approach.
+    *   *Outcome:* **Successful.** This direct association (Trigger -> Inject Payload) was learnable. Quick fine-tuning checks using **QLoRA** unsloth showed consistent payload injection, validating the approach.
 
 ### Testing the Waters: BadAgent Replication
 
