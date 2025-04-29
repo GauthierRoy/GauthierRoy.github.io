@@ -23,7 +23,7 @@ Classifying patents automatically isn't easy:
   <img src="/images/modernbert-patents/generic_classification_concept.png" alt="Generic diagram showing text input, processing/model, and classified output labels" style="max-width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 1: Conceptual overview of text classification: Input text is processed by a model to assign predefined categories. [Image Source: Generic representation]</em>
+  <em>Figure 1: Conceptual overview of text classification: Input text is processed by a model to assign predefined categories.</em>
 </p>
 
 ### The Contender: ModernBERT Enters the Ring
@@ -54,7 +54,7 @@ We set out to answer two main questions:
   <img src="/images/modernbert-patents/class_imbalance.png" alt="Histogram showing the frequency of the top 30 patent classes, highlighting severe imbalance" style="max-width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 2: The top 30 patent classes (out of 665) make up almost half the dataset! This imbalance needs careful handling. (Figure adapted from project report)</em>
+  <em>Figure 2: The top 30 patent classes (out of 665) make up almost half the dataset! This imbalance needs careful handling. </em>
 </p>
 
 <!-- Your provided Log-Log plot -->
@@ -62,7 +62,7 @@ We set out to answer two main questions:
   <img src="/images/modernbert-patents/cpc_loglog.png" alt="Log-log plot showing CPC Label Frequencies vs. Rank" style="max-width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 3: The log-log plot confirms the severe imbalance across all 665 classes, with a steep drop-off and a long tail of infrequent classes. (Figure adapted from project report)</em>
+  <em>Figure 3: The log-log plot confirms the severe imbalance across all 665 classes, with a steep drop-off and a long tail of infrequent classes. </em>
 </p>
 
 **Our Training Strategy:** We primarily focused on fine-tuning ModernBERT by adding a classification layer on top and training it to predict the correct patent codes (a multi-label problem, as one patent can fit multiple categories) [8, 11]. We used standard techniques like Binary Cross-Entropy loss.
@@ -72,7 +72,7 @@ We set out to answer two main questions:
   <img src="/images/modernbert-patents/generic_finetuning_diagram.png" alt="Generic diagram showing a pre-trained model being adapted with new data/layers for a specific task" style="max-width: 80%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 4: Fine-tuning adapts a general pre-trained model (like ModernBERT) for a specialized task (like patent classification) using task-specific data. [Image Source: Generic representation]</em> [11, 16, 21]
+  <em>Figure 4: Fine-tuning adapts a general pre-trained model (like ModernBERT) for a specialized task (like patent classification) using task-specific data. </em> [11, 16, 21]
 </p>
 
 ### Putting it to the Test: Key Findings
@@ -97,7 +97,7 @@ This was a major win. While we didn't create a specific chart for this page, our
   <img src="/images/modernbert-patents/seqlen.png" alt="Micro F1 score during fine-tuning for different sequence lengths (128, 1024, 1536)" style="max-width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 5: Overall performance (Micro F1) during training is very similar across different input sequence lengths (128, 1024, 1536), with longer sequences showing only a slight edge later. (Figure adapted from project report)</em>
+  <em>Figure 5: Overall performance (Micro F1) during training is very similar across different input sequence lengths (128, 1024, 1536), with longer sequences showing only a slight edge later. </em>
 </p>
 
 <!-- Your provided Pretraining vs Finetuning Micro F1 -->
@@ -105,7 +105,7 @@ This was a major win. While we didn't create a specific chart for this page, our
   <img src="/images/modernbert-patents/ptft_f1_micro.png" alt="Micro F1 score comparing pretraining+finetuning vs vanilla finetuning" style="max-width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 6: Overall performance (Micro F1) is nearly identical whether using vanilla fine-tuning or adding a domain pre-training step first. (Figure adapted from project report)</em>
+  <em>Figure 6: Overall performance (Micro F1) is nearly identical whether using vanilla fine-tuning or adding a domain pre-training step first. </em>
 </p>
 
 <!-- Your provided Pretraining vs Finetuning Macro F1 -->
@@ -113,7 +113,7 @@ This was a major win. While we didn't create a specific chart for this page, our
   <img src="/images/modernbert-patents/ptft_f1_macro.png" alt="Macro F1 score comparing pretraining+finetuning vs vanilla finetuning" style="max-width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 7: Average per-class performance (Macro F1) was slightly lower when adding domain pre-training, suggesting vanilla fine-tuning was sufficient or even preferable here. (Figure adapted from project report)</em>
+  <em>Figure 7: Average per-class performance (Macro F1) was slightly lower when adding domain pre-training, suggesting vanilla fine-tuning was sufficient or even preferable here. </em>
 </p>
 
 
@@ -128,7 +128,7 @@ We experimented with weighting the loss function to pay more attention to rare c
   <img src="/images/modernbert-patents/cw_vs_ft_prec.png" alt="Macro Precision comparing class-weighted vs vanilla finetuning" style="max-width: 70%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 8: Using class weights improved the average precision across all classes (Macro Precision), particularly later in training, compared to standard fine-tuning. (Figure adapted from project report)</em>
+  <em>Figure 8: Using class weights improved the average precision across all classes (Macro Precision), particularly later in training, compared to standard fine-tuning. </em>
 </p>
 
 
@@ -143,7 +143,7 @@ We introduced a **Hierarchical Loss** function that penalizes "big jumps" in the
   <img src="/images/modernbert-patents/generic_hierarchy_diagram.png" alt="Generic diagram showing a tree-like hierarchical structure" style="max-width: 60%; height: auto; display: block; margin-left: auto; margin-right: auto;">
 </p>
 <p style="text-align: center;">
-  <em>Figure 9: Patent codes (like CPC) have a hierarchical structure. Our Hierarchical Loss function incorporates this knowledge, penalizing errors based on their distance in the hierarchy. [Image Source: Generic representation]</em> [15, 17]
+  <em>Figure 9: Patent codes (like CPC) have a hierarchical structure. Our Hierarchical Loss function incorporates this knowledge, penalizing errors based on their distance in the hierarchy.</em> [15, 17]
 </p>
 
 *   **Result:** By combining this Hierarchical Loss with optimized training parameters (learning rate, weight decay) and slightly longer training (2 epochs), **our ModernBERT model surpassed the previous state-of-the-art F1@1 score reported by PatentBERT!**
@@ -173,6 +173,8 @@ This work paves the way for faster, more accurate AI tools to help navigate the 
 
 **Code & Data Repository:** [**https://github.com/Malav-P/modernpatentBERT**](https://github.com/Malav-P/modernpatentBERT)
 **Dataset:** [**https://huggingface.co/datasets/MalavP/USPTO-3M**](https://huggingface.co/datasets/MalavP/USPTO-3M)
+
+*This project was a collaborative effort with [Malav Patel](https://www.linkedin.com/in/malavp00/), whose contributions were integral to its success.*
 
 ### Key Technologies
 
