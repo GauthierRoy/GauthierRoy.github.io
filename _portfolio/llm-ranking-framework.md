@@ -11,6 +11,8 @@ Large Language Models (LLMs) like ChatGPT, Llama, and Gemma are rapidly entering
 
 This works reasonably well when the AI knows a lot about you. But what about **new users** – the "cold-start" problem? With little to no interaction history, how does the LLM make recommendations?
 
+**Code Repository:** [**https://github.com/GauthierRoy/biais_llm_rec**](https://github.com/GauthierRoy/biais_llm_rec)
+
 ### The Hidden Risk: Bias from Scarcity
 
 In cold-start scenarios, LLMs might grasp at the only straws available: basic demographic details provided by the user, often including **sensitive attributes** like gender, nationality, age, or race. Relying heavily on these attributes is ethically dangerous.
@@ -149,8 +151,6 @@ By enabling easier detection of these issues, we hope to encourage the developme
 *This project was a collaborative effort with [Alexandre ANDRE](https://www.linkedin.com/in/alexandre-andre-/).*
 
 ---
-
-**Code Repository:** [**https://github.com/GauthierRoy/biais_llm_rec**](https://github.com/GauthierRoy/biais_llm_rec)
 
 ### Key Technologies & Concepts
 

@@ -9,6 +9,8 @@ header:
 
 Large Language Model (LLM) agents are rapidly evolving, moving beyond text generation to autonomously interact with digital environments, use tools, and even write and execute code. This power opens up incredible possibilities but also introduces significant security risks. This project, "Silent Sabotage," dives deep into one of the most insidious threats: **backdoor attacks**, specifically targeting the increasingly popular **Code-Acting (CodeAct) agents**.
 
+**Code Repository:** [**https://github.com/GauthierRoy/llm_backdoor**](https://github.com/GauthierRoy/llm_backdoor)
+
 ### The Challenge: Agents That Write Their Own Rules (and Code)
 
 Unlike standard LLMs or agents using predefined tools, CodeAct agents operate in a tight loop: they interpret instructions, **generate executable code** (often Python), run it, observe the results (including errors), and refine their approach. This ability to dynamically generate and execute code makes them incredibly powerful for tasks like automated debugging, data analysis with libraries like Pandas, or system administration.
@@ -101,7 +103,6 @@ Our investigation reveals critical vulnerabilities specific to CodeAct agents:
 
 While larger models showed some increased resistance in the general BadAgent tests, the specific architecture and training paradigm of CodeAct agents makes them a particularly concerning target. As these powerful autonomous systems become more integrated into critical workflows (software development, cloud management), ensuring their security against such "silent sabotage" is paramount. Sourcing models and datasets from trusted origins and developing robust detection/defense mechanisms are crucial next steps.
 
-**Code Repository:** [**https://github.com/GauthierRoy/llm_backdoor**](https://github.com/GauthierRoy/llm_backdoor)
 
 ### Key Technologies
 
